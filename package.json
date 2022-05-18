@@ -1,5 +1,11 @@
 {
   "name": "md-links",
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
   "version": "0.1.0",
   "description": "Library that validates links of .md files and obtains statistics",
   "author": {
@@ -11,8 +17,11 @@
   },
   "scripts": {
     "eslint": "eslint --ext .js test/",
-    "test": "jest",
+    "test": "jest --coverage",
     "start": "node src/index.js"
+  },
+  "directories": {
+    "test": "test"
   },
   "type": "module",
   "devDependencies": {
