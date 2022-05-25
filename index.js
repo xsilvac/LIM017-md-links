@@ -7,9 +7,9 @@
 import { mdLinks } from './prueba.js'
 const ruta = 'src/Archivos/prueba.md';
 const rutaError = 'src/Archivos/pruebass.md'
-const carpeta = 'src'
+const carpeta = 'src/Archivos'
 //console.log('hola')
-console.log(mdLinks(carpeta));
+console.log(mdLinks(rutaError));
 
 //Verificar si la ruta existe
 // existsPath(ruta);

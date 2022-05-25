@@ -9,22 +9,19 @@ export const mdLinks = (route) => {
   
       if (isADirectory(routeAbsolute)) {
         let listaRutasEncotradas = unirRuta(routeAbsolute);
-        console.log('aqui');
-        if (listaRutasEncotradas.length != 0) { 
-        listaRutasEncotradas.forEach(ruta => {
-            console.log('algo')
-            if (isFileMd(routeAbsolute)){
-                listaArchivosMD.push(ruta); 
-                console.log('perdida')
+        if (listaRutasEncotradas.length != 0) {
+        listaRutasEncotradas.map(ruta => {
+          //console.log(ruta);
+            if (isFileMd(ruta)){
+                listaArchivosMD.push(ruta);
+                //console.log(listaArchivosMD)
             }
-            else{mdLinks(ruta)
-                console.log('que hago')}
-            
-        })}}
+            else{mdLinks(ruta)}
+          })}}
 
 
-      else if (isFileMd(routeAbsolute)) { 
-          listaArchivosMD.push(routeAbsolute); 
+      else if (isFileMd(routeAbsolute)) {
+          listaArchivosMD.push(routeAbsolute);
         }
     }
     else { console.log('La ruta no es valida'); }
