@@ -26,3 +26,24 @@ export const mdLinks = (route) => {
         console.log('La ruta no existe')
     }
 }
+
+// FUNCION QUE RETORNA UN ARREGLO DE LINKS
+export const getLinks = (arrayFileMd) => {
+    const arrObjLinks = [];
+  
+    arrayFileMd.forEach((routeFileMd) => {
+      const readFileMd = readFile(routeFileMd);
+      let linksFound = [];
+      linksFound = readFileMd.match(/\[(.*?)\)/g);
+      if (linksFound != null) {
+        linksFound.forEach((link) => {
+          const objLink = {};
+          objLink.href = link.match(/(?<=\().+?(?=\))/g);
+          objLink.text = link.match(/(?<=\[).+?(?=\])/g);
+          objLink.file = routeFileMd;
+          arrObjLinks.push(objLink);
+        });
+      }
+    });
+    return arrObjLinks;
+  };
