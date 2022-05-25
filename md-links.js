@@ -1,13 +1,11 @@
-import * as fs from 'fs';
-import * as path from 'path';
+import {buscarArchivosMd, obtenerLinks} from './index.js';
 
-//FUNCION VERIFICAR SI LA RUTA EXISTE
-export const existsPath = (path) => {
-    if(fs.existsSync(path)===false){
-        console.log('La ruta no existe');
-    }
-    else{
-        console.log('La ruta existe');
-    }
-}
+const rutaCorrecta = 'C:\Users\Jimena\Downloads\laboratoria\LIM017-md-links\src\Archivos\prueba.md';
+const rutaErronea = 'src\textss.txt';
+const rutatext = 'src\text.txt';
+const rutaAbsoluta = 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src';
+const otraRuta = 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\README.md';
+const rutaCarpeta = 'C:\Users\Jimena\Downloads\laboratoria\LIM017-md-links\src';
 
+console.log(buscarArchivosMd(otraRuta));
+console.log(obtenerLinks(buscarArchivosMd(otraRuta)))
