@@ -6,26 +6,19 @@ import path from 'path';
 
 // FUNCION VERIFICAR SI LA RUTA EXISTE
 export const isRouteExists = (route) => fs.existsSync(route);
-// console.log(isRouteExists('src/Archivos/pruebass.md'));
 
 // FUNCION QUE CONVIERTE A RUTA ABSOLUTA
 export const convertAbsolutePath = (route) => path.resolve(route);
-// console.log(convertAbsolutePath('src/Archivos/prueba.md'));
 
 // FUNCION VERIFICAR SI LA RUTA ES UNA CARPETA)
 export const isADirectory = (route) => fs.statSync(route).isDirectory();
 
 // FUNCION QUE LEE ARCHIVOS
 export const readFile = (route) => fs.readFileSync(route, 'utf8');
-// console.log(readFile('src/Archivos'));
 
 // FUNCION QUE VERIFICA SI ES UN ARCHIVO .MD
 export const isFileMd = (route) => path.extname(route) === '.md';
-// console.log(isFileMd('C:\Users\Jimena\Downloads\laboratoria\LIM017-md-links\src\Archivos\prueba.md'))
 
-const rutasEncotradas = (ruta) => fs.readdirSync(ruta, 'utf8');
-// console.log(rutasEncotradas('HOLAAAAA', 'C:\Users\Jimena\Downloads\laboratoria\LIM017-md-links\src'))
-// console.log(rutasEncotradas('C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src'))
+const rutasEncotradas = (route) => fs.readdirSync(route, 'utf8');
+
 export const joinPaths = (route) => rutasEncotradas(route).map((elemento) => path.join(route, elemento));
-// console.log(unirRuta('C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src'))
-// console.log(unirRuta('C:\Users\Jimena\Downloads\laboratoria\LIM017-md-links\src'))

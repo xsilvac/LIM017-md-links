@@ -46,7 +46,7 @@ export const getLinks = (arrayFileMd) => {
         objLink.file = routeFileMd;
         arrObjLinks.push(objLink);
       });
-    } //else { console.log('No existe links'); }
+    }
   });
   return arrObjLinks;
 };
