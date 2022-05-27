@@ -1,15 +1,15 @@
-import {mdLinks,  getLinks} from './md-links.js';
-const rutaCorrecta = 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\texto.md';
-const rutaErronea = 'src\textss.txt';
-const rutatext = 'src\text.txt';
-const rutaAbsoluta = 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\README.md';
-const rutaCarpeta = 'C:\Users\Jimena\Downloads\laboratoria\LIM017-md-links\src';
+/* eslint-disable linebreak-style */
+/* eslint-disable import/extensions */
+/* eslint-disable linebreak-style */
+import { mdLinks, getLinks } from './md-links.js';
 
-
-const ruta = 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\Archivos\\prueba.md';
-const rutaError = 'src/Archivos/pruebass.md'
+const rutaError = 'src/Archivos';
 const carpeta = 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src';
-console.log(mdLinks(ruta))
-console.log(getLinks(mdLinks(ruta)))
-//console.log(mdLinks(rutaCorrecta));
-//console.log(getLinks(mdLinks(rutaCorrecta)))
+// mdLinks(rutaError);
+// console.log(getLinks(['C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\empty']));
+
+// console.log(getLinks(mdLinks(rutaCorrecta)))
+const directoryEmpty = ['C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\empty'];
+const probando = ['C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\Archivos\\prueba.md'];
+// console.log(mdLinks('C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\empty') , 'hola');
+console.log(getLinks(['C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\Archivos\\nuevo.md']));
