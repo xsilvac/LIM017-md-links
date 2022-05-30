@@ -7,8 +7,8 @@ export const prueba = console.log('La ruta no es valida');
 export const arrayFileMd = ['C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\Archivos\\prueba.md'];
 export const fileEmpty = ['C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\Archivos\\nuevo.md'];
 export const result = [{
-  href: ['https://curriculum.laboratoria.la/es/topics/javascript/03-functions/02-arrow'],
-  text: ['Probando'],
+  href: 'https://curriculum.laboratoria.la/es/topics/javascript/03-functions/02-arrow',
+  text: 'Probando',
   file: 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\Archivos\\prueba.md',
 }];
 export const routesAbsoluts = [
@@ -24,4 +24,36 @@ export const arrayRoutes = [
   'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\empty',
   'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\text.txt',
   'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\texto.md'
+];
+export const infoLink = [
+  {
+    href: 'https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/length',
+    text: 'Probando este link que contiene más de cincuenta ',
+    file: 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\mdPrueba.md',
+  },
+];
+export const arrStatusLink = [
+  {
+    href: 'https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/length',
+    text: 'Probando este link que contiene más de cincuenta ',
+    file: 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\mdPrueba.md',
+    status: 200,
+    ok: 'OK'
+  },
+];
+export const infoLinkFail = [
+  {
+    href: 'https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/lengthSSSS',
+    text: 'Probando este link que contiene más de cincuenta ',
+    file: 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\mdPrueba.md',
+  },
+];
+export const arrStatusLinkFail = [
+  {
+    href: 'https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/lengthSSSS',
+    text: 'Probando este link que contiene más de cincuenta ',
+    file: 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\mdPrueba.md',
+    status: 404,
+    ok: 'FAIL'
+  },
 ];
