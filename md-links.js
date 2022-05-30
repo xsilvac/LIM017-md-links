@@ -2,6 +2,8 @@
 /* eslint-disable import/extensions */
 /* eslint-disable linebreak-style */
 /* eslint-disable consistent-return */
+// import { fetch } from 'node-fetch';
+import fetch from 'node-fetch';
 import {
   isRouteExists, convertAbsolutePath, isADirectory, readFile, isFileMd, joinPaths,
 } from './index.js';
@@ -32,7 +34,7 @@ export const mdLinks = (route) => {
 
 // FUNCION QUE RETORNA UN ARREGLO DE LINKS
 export const getLinks = (arrayFileMd) => {
-  const arrObjLinks = [];
+  const arrayLinks = [];
 
   arrayFileMd.forEach((routeFileMd) => {
     const readFileMd = readFile(routeFileMd);
@@ -40,13 +42,26 @@ export const getLinks = (arrayFileMd) => {
     linksFound = readFileMd.match(/\[(.*?)\)/g);
     if (linksFound != null) {
       linksFound.forEach((link) => {
-        const objLink = {};
-        objLink.href = link.match(/(?<=\().+?(?=\))/g);
-        objLink.text = link.match(/(?<=\[).+?(?=\])/g);
-        objLink.file = routeFileMd;
-        arrObjLinks.push(objLink);
+        const infoLink = {};
+        infoLink.href = link.match(/(?<=\().+?(?=\))/g).toString();
+        infoLink.text = link.match(/(?<=\[).+?(?=\])/g).toString().substring(0, 49);
+        infoLink.file = routeFileMd;
+        arrayLinks.push(infoLink);
       });
     }
   });
-  return arrObjLinks;
+  return arrayLinks;
+};
+
+export const statusOfLinks = (arrayLinks) => {
+  const arrPromesas = arrayLinks.map((obj) => fetch(obj.href)
+    .then((res) => ({
+      href: obj.href,
+      text: obj.text,
+      file: obj.file,
+      status: res.status,
+      ok: res.ok ? 'OK' : 'FAIL'
+    }))
+    .catch((error) => (console.error(error))));
+  return Promise.all(arrPromesas);
 };

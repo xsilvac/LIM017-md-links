@@ -3,10 +3,11 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable import/extensions */
 /* eslint-disable no-undef */
-import { mdLinks, getLinks } from '../md-links.js';
+import { mdLinks, getLinks, statusOfLinks } from '../md-links.js';
 
 import {
   route, routeError, file, prueba, arrayFileMd, fileEmpty, result, routesAbsoluts,
+  infoLink, arrStatusLink, infoLinkFail, arrStatusLinkFail,
 } from '../routesTest.js';
 
 describe('mdLinks', () => {
@@ -29,5 +30,14 @@ describe('getLinks', () => {
   });
   it('Deberia retornar un arreglo vacio si no hay archivo', () => {
     expect(getLinks(fileEmpty)).toEqual([]);
+  });
+});
+
+describe('statusOfLinks', () => {
+  it.skip('Deberia retornar una promesa con "ok" en el estado de los links', () => {
+    expect(statusOfLinks(infoLink)).toEqual(arrStatusLink);
+  });
+  it.skip('Deberia retornar una promesa con "fail" en el estado de los links', () => {
+    expect(statusOfLinks(infoLinkFail)).toEqual(arrStatusLinkFail);
   });
 });
