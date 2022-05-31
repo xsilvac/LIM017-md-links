@@ -57,3 +57,10 @@ export const arrStatusLinkFail = [
     ok: 'FAIL'
   },
 ];
+export const hrefError = [
+  {
+    href: '',
+    text: 'Probando este link que contiene más de cincuenta ',
+    file: 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\mdPrueba.md',
+  },
+];

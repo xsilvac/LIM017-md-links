@@ -33,10 +33,9 @@
     "eslint": "^8.16.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "jest": "^28.1.0",
-    "node-fetch": "^2.6.7"
+    "jest": "^28.1.0"
   },
   "dependencies": {
-    "node-fetch": "^3.2.0"
+    "node-fetch": "^2.6.7"
   }
 }
