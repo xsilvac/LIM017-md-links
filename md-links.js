@@ -65,3 +65,9 @@ export const statusOfLinks = (arrayLinks) => {
     .catch((error) => (console.error(error))));
   return Promise.all(arrPromesas);
 };
+
+export const totalLinks = (arrayLinks) => arrayLinks.length;
+
+export const uniqueLinks = (arrayLinks) => arrayLinks.filter((obj) => obj.ok === 'OK').length;
+
+export const brokenLinks = (arrayLinks) => arrayLinks.filter((obj) => obj.ok === 'FAIL').length;
