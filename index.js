@@ -1,24 +1,18 @@
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable no-unused-vars */
 /* eslint-disable linebreak-style */
-/* eslint-disable max-len */
-/* eslint-disable linebreak-style */
-import fs from 'fs';
-import path from 'path';
+import { getRoutes, getLinks, statusOfLinks } from './md-links.js';
+import { isRouteExists, convertAbsolutePath } from './methods.js';
 
-// FUNCION VERIFICAR SI LA RUTA EXISTE
-export const isRouteExists = (route) => fs.existsSync(route);
-
-// FUNCION QUE CONVIERTE A RUTA ABSOLUTA
-export const convertAbsolutePath = (route) => path.resolve(route);
-
-// FUNCION VERIFICAR SI LA RUTA ES UNA CARPETA)
-export const isADirectory = (route) => fs.statSync(route).isDirectory();
-
-// FUNCION QUE LEE ARCHIVOS
-export const readFile = (route) => fs.readFileSync(route, 'utf8');
-
-// FUNCION QUE VERIFICA SI ES UN ARCHIVO .MD
-export const isFileMd = (route) => path.extname(route) === '.md';
-
-const rutasEncotradas = (route) => fs.readdirSync(route, 'utf8');
-
-export const joinPaths = (route) => rutasEncotradas(route).map((elemento) => path.join(route, elemento));
+export const mdLinks = (path, options) => new Promise((resolve, reject) => {
+  if (isRouteExists(path)) {
+    const pathAbsoluta = convertAbsolutePath(path);
+    const arrArchivosMd = getRoutes(pathAbsoluta);
+    const arrObjLinksEncontrados = getLinks(arrArchivosMd);
+    if (options.validate) {
+      resolve(statusOfLinks(arrObjLinksEncontrados).then((response) => response));
+    } else {
+      resolve(arrObjLinksEncontrados);
+    }
+  } else reject(new Error('La ruta no existe'));
+});

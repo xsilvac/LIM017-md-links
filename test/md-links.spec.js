@@ -3,24 +3,27 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable import/extensions */
 /* eslint-disable no-undef */
-import { mdLinks, getLinks, statusOfLinks } from '../md-links.js';
+import fetch from 'node-fetch';
+import { getRoutes, getLinks, statusOfLinks } from '../md-links.js';
 
 import {
   route, routeError, file, prueba, arrayFileMd, fileEmpty, result, routesAbsoluts,
-  infoLink, arrStatusLink, infoLinkFail, arrStatusLinkFail,
+  infoLink, arrStatusLink, infoLinkFail, arrStatusLinkFail, hrefError,
 } from '../routesTest.js';
 
-describe('mdLinks', () => {
+jest.mock('node-fetch');
+
+describe('getRoutes', () => {
   it('Deberia de mandar mensaje de error', () => {
-    expect(mdLinks(routeError)).toStrictEqual(prueba);
+    expect(getRoutes(routeError)).toStrictEqual(prueba);
   });
   it('Deberia convertir la ruta relativa a absoluta', () => {
-    expect(mdLinks(route)).toStrictEqual([
+    expect(getRoutes(route)).toStrictEqual([
       'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\texto.md',
     ]);
   });
   it('Deberia obtener un array con las rutas absolutas de la carpeta', () => {
-    expect(mdLinks(file)).toStrictEqual(routesAbsoluts);
+    expect(getRoutes(file)).toStrictEqual(routesAbsoluts);
   });
 });
 
@@ -34,10 +37,7 @@ describe('getLinks', () => {
 });
 
 describe('statusOfLinks', () => {
-  it.skip('Deberia retornar una promesa con "ok" en el estado de los links', () => {
-    expect(statusOfLinks(infoLink)).toEqual(arrStatusLink);
-  });
-  it.skip('Deberia retornar una promesa con "fail" en el estado de los links', () => {
-    expect(statusOfLinks(infoLinkFail)).toEqual(arrStatusLinkFail);
-  });
+  it('Deberia retornar una promesa con "ok" en el estado de los links', () => statusOfLinks(infoLink).then((res) => { expect(res).toEqual(arrStatusLink); }));
+  // it('Deberia retornar una promesa con "fail" en el estado de los links', () => statusOfLinks(hrefError)
+  //   .catch((e) => { expect(e).toEqual([ 'Existe un problema' ]); }));
 });

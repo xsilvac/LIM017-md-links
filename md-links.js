@@ -6,9 +6,9 @@
 import fetch from 'node-fetch';
 import {
   isRouteExists, convertAbsolutePath, isADirectory, readFile, isFileMd, joinPaths,
-} from './index.js';
+} from './methods.js';
 
-export const mdLinks = (route) => {
+export const getRoutes = (route) => {
   let fileListMd = [];
   if (isRouteExists(route)) {
     const routeAbsolute = convertAbsolutePath(route);
@@ -19,7 +19,7 @@ export const mdLinks = (route) => {
           if (isFileMd(newRoute)) {
             fileListMd.push(newRoute);
           } else {
-            fileListMd = fileListMd.concat(mdLinks(newRoute));
+            fileListMd = fileListMd.concat(getRoutes(newRoute));
           }
         });
       }
@@ -62,7 +62,7 @@ export const statusOfLinks = (arrayLinks) => {
       status: res.status,
       ok: res.ok ? 'OK' : 'FAIL'
     }))
-    .catch((error) => (console.error(error))));
+    .catch(() => 'Existe un problema'));
   return Promise.all(arrPromesas);
 };
 
