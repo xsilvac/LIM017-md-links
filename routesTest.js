@@ -12,6 +12,7 @@ export const result = [{
   file: 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\Archivos\\prueba.md',
 }];
 export const routesAbsoluts = [
+  'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\Archivos\\carpeta\\linksRotos.md',
   'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\Archivos\\nuevo.md',
   'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\Archivos\\prueba.md',
   'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\texto.md',
@@ -23,7 +24,7 @@ export const arrayRoutes = [
   'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\Archivos',
   'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\empty',
   'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\text.txt',
-  'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\texto.md'
+  'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\texto.md',
 ];
 export const infoLink = [
   {
@@ -38,7 +39,7 @@ export const arrStatusLink = [
     text: 'Probando este link que contiene más de cincuenta ',
     file: 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\mdPrueba.md',
     status: 200,
-    ok: 'OK'
+    ok: 'OK',
   },
 ];
 export const infoLinkFail = [
@@ -54,7 +55,7 @@ export const arrStatusLinkFail = [
     text: 'Probando este link que contiene más de cincuenta ',
     file: 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\mdPrueba.md',
     status: 404,
-    ok: 'FAIL'
+    ok: 'FAIL',
   },
 ];
 export const hrefError = [

@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable import/extensions */
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable no-unused-vars */
 /* eslint-disable linebreak-style */
@@ -10,7 +12,7 @@ export const mdLinks = (path, options) => new Promise((resolve, reject) => {
     const arrArchivosMd = getRoutes(pathAbsoluta);
     const arrObjLinksEncontrados = getLinks(arrArchivosMd);
     if (options.validate) {
-      resolve(statusOfLinks(arrObjLinksEncontrados).then((response) => response));
+      resolve(statusOfLinks(arrObjLinksEncontrados).then((res) => res));
     } else {
       resolve(arrObjLinksEncontrados);
     }
