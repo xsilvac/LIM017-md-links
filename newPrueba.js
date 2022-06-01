@@ -30,14 +30,14 @@ import { mdLinks } from './index.js';
 //     file: 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\mdPrueba.md',
 //   },
 // ];
-const arrPrueba = [
-  {
-    href: 'probando',
-    text: 'Probando este link que contiene más de cincuenta ',
-    file: 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\mdPrueba.md',
-  },
-];
-statusOfLinks(arrPrueba).then((v) => console.log(v));
+// const arrPrueba = [
+//   {
+//     href: 'probando',
+//     text: 'Probando este link que contiene más de cincuenta ',
+//     file: 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\mdPrueba.md',
+//   },
+// ];
+// statusOfLinks(arrPrueba).then((v) => console.log(v));
 
 // statusOfLinks(prueba).then((v) => console.log('total', totalLinks(v)));
 
@@ -45,4 +45,8 @@ statusOfLinks(arrPrueba).then((v) => console.log(v));
 
 // statusOfLinks(prueba).then((v) => console.log('rotos', brokenLinks(v)));
 
-console.log(mdLinks('src/texto.md', { validate: true }));
+// console.log(mdLinks('src/texto.md', { validate: true }));
+
+mdLinks('mdPrueba.md', { validate: true })
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err));
