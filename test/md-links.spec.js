@@ -7,16 +7,13 @@ import fetch from 'node-fetch';
 import { getRoutes, getLinks, statusOfLinks } from '../md-links.js';
 
 import {
-  route, routeError, file, prueba, arrayFileMd, fileEmpty, result, routesAbsoluts,
+  route, file, arrayFileMd, fileEmpty, result, routesAbsoluts,
   infoLink, arrStatusLink, infoLinkFail, arrStatusLinkFail, hrefError,
 } from '../routesTest.js';
 
 jest.mock('node-fetch');
 
 describe('getRoutes', () => {
-  it('Deberia de mandar mensaje de error', () => {
-    expect(getRoutes(routeError)).toStrictEqual(prueba);
-  });
   it('Deberia convertir la ruta relativa a absoluta', () => {
     expect(getRoutes(route)).toStrictEqual([
       'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\texto.md',
@@ -38,6 +35,6 @@ describe('getLinks', () => {
 
 describe('statusOfLinks', () => {
   it('Deberia retornar una promesa con "ok" en el estado de los links', () => statusOfLinks(infoLink).then((res) => { expect(res).toEqual(arrStatusLink); }));
-  // it('Deberia retornar una promesa con "fail" en el estado de los links', () => statusOfLinks(hrefError)
-  //   .catch((e) => { expect(e).toEqual([ 'Existe un problema' ]); }));
+  it('Deberia retornar una promesa con "fail" en el estado de los links', () => statusOfLinks(hrefError)
+    .catch((e) => { expect(e).toBe('Existe un problema'); }));
 });

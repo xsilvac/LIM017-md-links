@@ -28,8 +28,6 @@ export const getRoutes = (route) => {
     }
     return fileListMd;
   }
-
-  console.log('La ruta no existe');
 };
 
 // FUNCION QUE RETORNA UN ARREGLO DE LINKS
@@ -39,12 +37,12 @@ export const getLinks = (arrayFileMd) => {
   arrayFileMd.forEach((routeFileMd) => {
     const readFileMd = readFile(routeFileMd);
     let linksFound = [];
-    linksFound = readFileMd.match(/\[(.*?)\)/g);
+    linksFound = readFileMd.match(/\[(.*)\]\(((?:\/|https?:\/\/).*)\)/gi);
     if (linksFound != null) {
       linksFound.forEach((link) => {
         const infoLink = {};
-        infoLink.href = link.match(/(?<=\().+?(?=\))/g).toString();
-        infoLink.text = link.match(/(?<=\[).+?(?=\])/g).toString().substring(0, 49);
+        infoLink.href = link.match(/\(((?:\/|https?:\/\/).*)\)/g).join().slice(1, -1);
+        infoLink.text = link.match(/\[(.*)\]/g).join().slice(1, -1).substring(0, 49);
         infoLink.file = routeFileMd;
         arrayLinks.push(infoLink);
       });
@@ -60,7 +58,7 @@ export const statusOfLinks = (arrayLinks) => {
       text: obj.text,
       file: obj.file,
       status: res.status,
-      ok: res.ok ? 'OK' : 'FAIL'
+      ok: res.ok ? 'OK' : 'FAIL',
     }))
     .catch(() => 'Existe un problema'));
   return Promise.all(arrPromesas);
