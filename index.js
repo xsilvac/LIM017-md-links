@@ -16,5 +16,5 @@ export const mdLinks = (path, options) => new Promise((resolve, reject) => {
     } else {
       resolve(arrObjLinksEncontrados);
     }
-  } else reject(new Error('La ruta no existe'));
+  } else reject('La ruta no existe');
 });

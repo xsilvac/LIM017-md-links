@@ -1,9 +1,7 @@
 /* eslint-disable linebreak-style */
 export const route = 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\texto.md';
-export const routeError = 'src/Archivos/pruebass.md';
 export const file = 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src';
 export const resultAbsolute = 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\Archivos\\prueba.md';
-export const prueba = console.log('La ruta no es valida');
 export const arrayFileMd = ['C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\Archivos\\prueba.md'];
 export const fileEmpty = ['C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\Archivos\\nuevo.md'];
 export const result = [{
@@ -63,5 +61,35 @@ export const hrefError = [
     href: '',
     text: 'Probando este link que contiene más de cincuenta ',
     file: 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\mdPrueba.md',
+  },
+];
+
+export const resultMdLinks = [{
+  href: 'https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/03-functions',
+  text: 'Funciones control de flujo',
+  file: 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\texto.md',
+  status: 200,
+  ok: 'OK',
+},
+{
+  href: 'https://curriculum.laboratoria.la/es/topics/javascript/03-functions/01-classic',
+  text: 'Funciones clásicas',
+  file: 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\texto.md',
+  status: 200,
+  ok: 'OK',
+},
+{
+  href: 'https://curriculum.laboratoria.la/es/topics/javascript/03-functions/02-arrow',
+  text: 'Arrow Functions',
+  file: 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\texto.md',
+  status: 200,
+  ok: 'OK',
+},
+];
+export const basicMdLinks = [
+  {
+    href: 'https://curriculum.laboratoria.la/es/topics/javascript/03-functions/02-arrow',
+    text: 'Probando',
+    file: 'C:\\Users\\Jimena\\Downloads\\laboratoria\\LIM017-md-links\\src\\Archivos\\prueba.md',
   },
 ];
