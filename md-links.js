@@ -66,6 +66,6 @@ export const statusOfLinks = (arrayLinks) => {
 
 export const totalLinks = (arrayLinks) => arrayLinks.length;
 
-export const uniqueLinks = (arrayLinks) => arrayLinks.filter((obj) => obj.ok === 'OK').length;
+export const uniqueLinks = (arrayLinks) => [...new Set(arrayLinks.map((obj) => obj.href))].length;
 
 export const brokenLinks = (arrayLinks) => arrayLinks.filter((obj) => obj.ok === 'FAIL').length;
