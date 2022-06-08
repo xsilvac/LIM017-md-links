@@ -8,7 +8,7 @@ import { getRoutes, getLinks, statusOfLinks } from '../md-links.js';
 
 import {
   route, file, arrayFileMd, fileEmpty, result, routesAbsoluts,
-  infoLink, arrStatusLink, infoLinkFail, arrStatusLinkFail, hrefError,
+  infoLink, arrStatusLink, hrefError,
 } from '../routesTest.js';
 
 jest.mock('node-fetch');
