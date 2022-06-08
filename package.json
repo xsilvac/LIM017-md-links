@@ -1,12 +1,12 @@
 {
-  "name": "md-links",
+  "name": "mdlinksximena",
   "jest": {
     "verbose": true,
     "transform": {
       "^.+\\.[t|j]sx?$": "babel-jest"
     }
   },
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Library that validates links of .md files and obtains statistics",
   "author": {
     "name": "Ximena Silva Cotrina",
