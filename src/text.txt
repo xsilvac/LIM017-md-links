@@ -1,4 +1,1 @@
-ESTE ES EL ARCHIVO TXT
-En este apartado encontrara un archivo comprimido con ejemplos con la versión 3.3 del CFDI en formato .Txt, archivos de emision 3.3, Nota de crédito 3.3, Comprobante de Arrendamiento, Comprobante Donativo, comprobante de traslado y nomina 1.2
-
-En caso de que ninguno de los archivos proporcionados resuelva su duda acerca de como expresar cierta información favor de comunicarse con soporte técnico de Facturador Electrónico
+ESTE ES EL ARCHIVO TXT En este apartado encontrara un archivo comprimido con ejemplos con la versión 3.3 del CFDI en formato. Txt, archivos de emision 3.3, Nota de crédito 3.3, Comprobante de Arrendamiento, Comprobante Donativo.
