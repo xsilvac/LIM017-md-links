@@ -4,7 +4,7 @@
 
 **MD-Links** Es una librería que permite leer los archivos Markdown(.md) en busca sus links, en esta librería se puede obtener la estadística del estados de los links como links totales, únicos y rotos.
 
-![links](img/LINKS.jpg)
+![links](https://github.com/xsilvac/LIM017-md-links/blob/main/img/LINKS.jpg)
 
  ## 2.Instrucciones de uso
 
@@ -30,8 +30,8 @@ $ mdLinks <path> [options]
 ```sh
 $ mdLinks <path>
 ```
-![mdLinks](img/mdLinks.png)
-![mdLinksRoute](img/mdLinksRoute.png)
+![mdLinks](https://github.com/xsilvac/LIM017-md-links/blob/main/img/mdLinks.png)
+![mdLinksRoute](https://github.com/xsilvac/LIM017-md-links/blob/main/img/mdLinksRoute.png)
 
 #### 2.2.1 Opciones
 
@@ -41,7 +41,7 @@ Al pasar la opción '--validate', el módulo hará una petición HTTP para averi
 ```
 $ mdLinks <path> --validate
 ```
-![validate](img/validate.png)
+![validate](https://github.com/xsilvac/LIM017-md-links/blob/main/img/validate.png)
 
 **--stats**
 Si pasamos la opción `--stats` nos retornara las estadísticas de los links totales y únicos.
@@ -49,7 +49,7 @@ Si pasamos la opción `--stats` nos retornara las estadísticas de los links tot
 ```
 $ mdLinks <path> --stats
 ```
-![validate](img/stats.png)
+![validate](https://github.com/xsilvac/LIM017-md-links/blob/main/img/stats.png)
 
 **--validate --stats**
 Si pasamos la opción `--validate` y `--stats`  nos retornara las estadísticas de los links totales, únicos y rotos.
@@ -57,7 +57,7 @@ Si pasamos la opción `--validate` y `--stats`  nos retornara las estadísticas 
 ```
 $ mdLinks <path> --validate --stats
 ```
-![validate](img/validateAndStats.png)
+![validate](https://github.com/xsilvac/LIM017-md-links/blob/main/img/validateAndStats.png)
 
 **--stats --validate**
 Si pasamos la opción `--stats` y `--validate`  nos retornara las estadísticas de los links totales, únicos y rotos.
@@ -65,7 +65,7 @@ Si pasamos la opción `--stats` y `--validate`  nos retornara las estadísticas 
 ```
 $ mdLinks <path> --stats --validate
 ```
-![validate](img/statsAndValidate.png)
+![validate](https://github.com/xsilvac/LIM017-md-links/blob/main/img/statsAndValidate.png)
 
 **--help**
 Si pasamos la opción `--help` nos retornara un cuadro con la explicación de esta libreria.
@@ -73,12 +73,12 @@ Si pasamos la opción `--help` nos retornara un cuadro con la explicación de es
 ```
 $ mdLinks <path> --help
 ```
-![validate](img/help.png)
+![validate](https://github.com/xsilvac/LIM017-md-links/blob/main/img/help.png)
 
 ## 3. Proceso de desarrollo:
 La planeación se realizó a través de un flujograma que demuestra el proceso de la creación de esta libreria.
-![Diagrama de flujo](img/FlujogramaFinal.drawio.png)
-![Test](img/test.png)
+![Diagrama de flujo](https://github.com/xsilvac/LIM017-md-links/blob/main/img/FlujogramaFinal.drawio.png)
+![Test](https://github.com/xsilvac/LIM017-md-links/blob/main/img/test.png)
 
 ## 4. Liberías empleadas 📚
 
