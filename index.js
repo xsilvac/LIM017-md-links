@@ -1,4 +1,6 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable prefer-promise-reject-errors */
+/* eslint-disable linebreak-style */
 /* eslint-disable import/extensions */
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable no-unused-vars */

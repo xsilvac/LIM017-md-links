@@ -1,4 +1,7 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable import/extensions */
+/* eslint-disable no-unused-vars */
+/* eslint-disable linebreak-style */
 /* eslint-disable no-undef */
 import fetch from 'node-fetch';
 import { mdLinks } from '../index.js';
