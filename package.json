@@ -12,6 +12,7 @@
     "name": "Ximena Silva Cotrina",
     "email": "ximenasilvacotrina11@gmail.com"
   },
+  "license": "ISC",
   "engines": {
     "node": ">=14.x"
   },
@@ -24,9 +25,20 @@
     "test": "test"
   },
   "type": "module",
+  "main": "index.js",
   "bin": {
     "mdLinks": "./cli.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xsilvac/LIM017-md-links"
+  },
+  "keywords": [
+    "mdLinks",
+    "Markdown",
+    "links"
+  ],
+  "homepage": "https://github.com/xsilvac/LIM017-md-links/blob/main/README.md",
   "devDependencies": {
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.17.10",
